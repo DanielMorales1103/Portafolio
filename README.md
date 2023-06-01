@@ -9,6 +9,17 @@ En este proyecto, se utilizaron las siguientes tecnologías:
 - [Next.js](https://nextjs.org/): Framework de React para construir aplicaciones web rápidas y escalables.
 - [Tailwind CSS](https://tailwindcss.com/): Un framework de CSS utilitario que proporciona componentes predefinidos y una gran flexibilidad para estilizar tu aplicación.
 
+## Proyectos
+
+Los proyectos dentro de este portafolio reflejan el aprendizaje obtenido de HTML, JavaScript, CSS, React y KaboomJS
+
+- Poryectos
+  -  Replica de imagen con CSS
+  -  Juego de Memoria 
+  -  Calculadora
+  -  Replicación de la Página de Bootstrap (https://getbootstrap.com/)
+  -  Juego de batallas de Pokemón
+
 ## Requisitos 📋
 
 - Tener un editor de códogo (Recomendado VIsualStudio Code)
