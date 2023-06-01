@@ -13,7 +13,7 @@ En este proyecto, se utilizaron las siguientes tecnologías:
 
 Los proyectos dentro de este portafolio reflejan el aprendizaje obtenido de HTML, JavaScript, CSS, React y KaboomJS
 
-- Poryectos
+- Proyectos
   -  Replica de imagen con CSS
   -  Juego de Memoria 
   -  Calculadora
