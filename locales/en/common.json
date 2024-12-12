@@ -1,0 +1,28 @@
+{
+    "developer": "Developer",
+    "description": "I am a fifth-year student in Computer Science and Information Technology, with an interest in web development, Artificial Intelligence, Databases, and Software Development. I am passionate about challenges and enjoy working in teams, where I can share my ideas and learn from others. I am responsible and committed to continuously learning about the technologies and trends that inspire me, always striving to improve my skills and make a significant contribution to the projects I am involved in.",
+    "edu":"EDUCATION",
+    "present":"present",
+    "carrera":"Bachelor’s in Computer Science and Information Technology",
+    "colegio":"High School Diploma in Science and Letters with a focus on Computing",
+    "skill":"SKILLS",
+    "lenguajesP":"Programming Languages:",
+    "web":"Web Development:",
+    "frameworks":"Frameworks and Platforms:",
+    "db":"Databases:",
+    "tools":"Tools and Version Control:",
+    "languages":"Languages:",
+    "len":"Spanish (Native), English (B2)",
+    "experiencia":"WORK EXPERIENCE",
+    "springBus":{
+        "1":"Participated in the development of the web application for ticket sales, working on the front-end with Next.js and Tailwind CSS, and the back-end with Java and Spring Boot, following the Model-View-Controller pattern.",
+        "2":"Collaborated in the implementation of services and endpoints for data integration on the platform.",
+        "3":"Worked on the backoffice portal for providers, participating in both front-end and back-end development using Python, HTML, Bootstrap, and Django",
+        "4":" Implemented queries and data access logic in MySQL from the backend to retrieve and manage application information."
+    },
+    "pacifiko":{
+        "1":"Collaborated in the technology department, improving the store's website and the internal system used by the company, utilizing PHP, JavaScript, HTML, and CSS in a Model-View-Controller-based environment.",
+        "2":"Automated operational tasks using Python scripts, which significantly reduced the workload.",
+        "3":"Performed queries and administrative tasks in the MySQL database."
+    }
+}

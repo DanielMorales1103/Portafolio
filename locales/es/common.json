@@ -1,0 +1,28 @@
+{
+    "developer": "Desarrollador",
+    "description": "Soy estudiante de quinto año de Ciencias de la Computación y Tecnologías de la Información con interés en el desarrollo web, Inteligencia Artificial, Bases de Datos y Desarrollo de Software. Me apasionan los retos y disfruto trabajar en equipo, donde puedo aportar mis ideas y aprender de los demás. Soy responsable y me comprometo a aprender continuamente sobre las tecnologías y tendencias que me apasionan, buscando siempre mejorar mis habilidades y contribuir de manera significativa a los proyectos en los que participo.",
+    "edu":"EDUCACIÓN",
+    "present":"presente",
+    "carrera":" Ingeniería en Ciencias de la Computación y tecnologías de la Información",
+    "colegio":"Bachiller en Ciencias y Letras con orientación en Computación",
+    "skill":"HABILIDADES",
+    "lenguajesP":"Lenguajes de Programación:",
+    "web":"Desarrollo web:",
+    "frameworks":"Frameworks y plataformas:",
+    "db":"Bases de datos:",
+    "tools":"Herramientas y control de versiones:",
+    "languages":"Idiomas",
+    "len":"Español (Nativo), Inglés (B2)",
+    "experiencia":"EXPERIENCIA LABORAL",
+    "springBus":{
+        "1":"Participé en el desarrollo de la aplicación web para la venta de boletos, desarrollando el front-end con Next.js y Tailwind CSS, y el back-end con Java y Spring Boot, siguiendo el modelo vista-controlador",
+        "2":"Colaboré en la implementación de servicios y endpoints para la integración de datos en la plataforma.",
+        "3":"Trabajé en el portal de backoffice para proveedores, participando tanto en el desarrollo front-end como en el backend con Python, HTML, Bootstrap y Django.",
+        "4":"Implementé consultas y lógica de acceso a datos en MySQL desde el backend para obtener y gestionar la información de la aplicación."
+    },
+    "pacifiko":{
+        "1":"Colaboré en el sector de tecnología mejorando la página web de la tienda y el sistema interno utilizado por la empresa, utilizando PHP, JavaScript, HTML y CSS en un entorno basado en el modelo vista-controlador.",
+        "2":"Automaticé tareas operativas utilizando scripts en Python, lo que redujo significativamente el tiempo de trabajo.",
+        "3":"Realicé consultas y tareas de administración en la base de datos MySQL."
+    }
+}

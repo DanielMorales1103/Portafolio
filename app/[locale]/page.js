@@ -4,13 +4,15 @@ import {AiFillLinkedin,AiFillGithub} from 'react-icons/ai';
 import {SiGmail} from "react-icons/si";
 import {IoLogoWhatsapp} from "react-icons/io";
 import Image from 'next/image';
-import devdm from "../public/dev-dm-wave.png";
-import web5 from "../public/web5.png";
+import devdm from "../../public/dev-dm-wave.png";
+import web5 from "../../public/web5.png";
 import React, { useState } from 'react';
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from './components/LanguageSwitcher';
 
 export default function Home() {
   const [darkmode, setDarkmode] = useState(true)
-
+  const t = useTranslations();
   return (
     <div className={darkmode ? 'dark' : ''}>    
       <main className="bg-white px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40 dark:bg-gray-900">
@@ -27,48 +29,47 @@ export default function Home() {
                 <a className='flex gap-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md' href="https://github.com/DanielMorales1103/Portafolio.git">
                   <AiFillGithub className='text-xl sm:text-2xl'/> GitHub</a>
               </li>
+              <li>
+                {/* Selector de Idiomas */}
+                <LanguageSwitcher />
+              </li>
             </ul>
           </nav>
           <div className='text-center mt-12'>
             <h2 className='text-4xl sm:text-5xl py-2 text-teal-600 font-medium md:text-6xl'>
               Daniel Morales</h2>
-            <h3 className='text-lg sm:text-2xl py-2 md:text-3xl dark:text-gray-500'>Desarrollador</h3>
+            <h3 className='text-lg sm:text-2xl py-2 md:text-3xl dark:text-gray-500'>{t("developer")}</h3>
             <p className='text-sm sm:text-md py-5 leading-6 sm:leading-8 text-gray-800 md:text-xl mx-auto dark:text-gray-100 mb-6'> 
-              Soy estudiante de quinto año de <span className='italic'>Ciencias de la Computación y Tecnologías de la Información</span> con
-              interés en el desarrollo web, Inteligencia Artificial, Bases de Datos y Desarrollo de Software. Me
-              apasionan los retos y disfruto trabajar en equipo, donde puedo aportar mis ideas y aprender de los
-              demás. Soy responsable y me comprometo a aprender continuamente sobre las tecnologías y
-              tendencias que me apasionan, buscando siempre mejorar mis habilidades y contribuir de manera
-              significativa a los proyectos en los que participo.
+                {t("description")}
             </p>
           </div>
           <div className='relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 sm:w-72 md:w-80 overflow-hidden'>
-            <Image  src={devdm} />
+            <Image  src={devdm} alt="Imagen del desarrollador"/>
           </div>
         </section>
 
         <section className="flex flex-col md:flex-row gap-8 mt-8">
           {/* Sección de Educación */}
           <div className="md:w-1/2">
-            <h3 className="text-2xl sm:text-3xl py-1 md:py-4 dark:text-gray-500 text-center">EDUCACIÓN</h3>
+            <h3 className="text-2xl sm:text-3xl py-1 md:py-4 dark:text-gray-500 text-center">{t("edu")}</h3>
             <p className="text-sm sm:text-md py-2 leading-6 sm:leading-8 text-gray-800 md:text-xl dark:text-gray-100 text-left">
-              <strong>2021 - Actualidad:</strong> Universidad del Valle de Guatemala - Ingeniería en Ciencias de la Computación y Tecnologías de la Información
+              <strong>2021 - {t("present")}:</strong> Universidad del Valle de Guatemala - {t("carrera")}
             </p>
             <p className="text-sm sm:text-md py-2 leading-6 sm:leading-8 text-gray-800 md:text-xl dark:text-gray-100 text-left">
-              <strong>2007 - 2020:</strong> Colegio Suizo Americano - Bachiller en Ciencias y Letras con orientación en Computación
+              <strong>2007 - 2020:</strong> Colegio Suizo Americano - {t("colegio")}
             </p>
           </div>
 
           {/* Sección de Habilidades */}
           <div className="md:w-1/2">
-            <h3 className="text-2xl sm:text-3xl py-1 md:py-4 dark:text-gray-500 text-center">HABILIDADES</h3>
+            <h3 className="text-2xl sm:text-3xl py-1 md:py-4 dark:text-gray-500 text-center">{t("skill")}</h3>
             <ul className="text-sm sm:text-md py-2 leading-6 sm:leading-8 text-gray-800 md:text-xl dark:text-gray-100 list-disc list-inside text-left">
-              <li><strong>Lenguajes de Programación:</strong> Python, Java, JavaScript, PHP</li>
-              <li><strong>Desarrollo Web:</strong> HTML, CSS, Tailwind CSS, Bootstrap, React, Next.js</li>
-              <li><strong>Frameworks y Plataformas:</strong> Spring Boot, Django</li>
-              <li><strong>Bases de Datos:</strong> MySQL, MongoDB</li>
-              <li><strong>Herramientas y Control de Versiones:</strong> Docker, Git</li>
-              <li><strong>Idiomas:</strong> Español (Nativo), Inglés (B2)</li>
+              <li><strong>{t("lenguajesP")}</strong> Python, Java, JavaScript, PHP</li>
+              <li><strong>{t("web")}</strong> HTML, CSS, Tailwind CSS, Bootstrap, React, Next.js</li>
+              <li><strong>{t("frameworks")}</strong> Spring Boot, Django</li>
+              <li><strong>{t("db")}</strong> MySQL, MongoDB</li>
+              <li><strong>{t("tools")}</strong> Docker, Git</li>
+              <li><strong>{t("languages")}</strong>{t("len")}</li>
             </ul>
           </div>
         </section>
@@ -76,24 +77,24 @@ export default function Home() {
 
         <section className="mt-12">
           <div className="md:w-3/4 mx-auto">
-            <h3 className="text-2xl sm:text-3xl py-1 md:py-4 dark:text-gray-500 text-center">EXPERIENCIA LABORAL</h3>
+            <h3 className="text-2xl sm:text-3xl py-1 md:py-4 dark:text-gray-500 text-center">{t("experiencia")}</h3>
             <div className="text-sm sm:text-md py-2 leading-6 sm:leading-8 text-gray-800 md:text-xl dark:text-gray-100 text-left">
               <strong>Junior Developer</strong> <br />
-              <em>Spring-bus, Mar 2024 - Presente</em>
+              <em>Spring-bus, Mar 2024 - {t("present")}</em>
               <ul className="list-disc list-inside">
-                <li>Desarrollé la aplicación web para la venta de boletos utilizando Next.js y Tailwind CSS en el front-end y Java con Spring Boot en el back-end.</li>
-                <li>Colaboré en la implementación de servicios y endpoints para la integración de datos en la plataforma.</li>
-                <li>Trabajé en el portal de backoffice para proveedores, usando Python, HTML, Bootstrap y Django.</li>
-                <li>Implementé consultas y lógica de acceso a datos en MySQL desde el backend.</li>
+                <li>{t("springBus.1")}</li>
+                <li>{t("springBus.2")}</li>
+                <li>{t("springBus.3")}</li>
+                <li>{t("springBus.4")}</li>
               </ul>
             </div>
             <div className="text-sm sm:text-md py-2 leading-6 sm:leading-8 text-gray-800 md:text-xl dark:text-gray-100 text-left mt-6">
               <strong>Junior Developer Intern</strong> <br />
               <em>Pacifiko.com, Jun 2023 - Feb 2024</em>
               <ul className="list-disc list-inside">
-                <li>Mejoré la página web de la tienda y el sistema interno utilizando PHP, JavaScript, HTML y CSS.</li>
-                <li>Automaticé tareas operativas con scripts en Python, reduciendo significativamente el tiempo de trabajo.</li>
-                <li>Realicé consultas y tareas de administración en la base de datos MySQL.</li>
+                <li>{t("pacifiko.1")}</li>
+                <li>{t("pacifiko.2")}</li>
+                <li>{t("pacifiko.3")}</li>
               </ul>
             </div>
           </div>
@@ -109,7 +110,7 @@ export default function Home() {
           {/* Proyectos */}
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-10'>            
             <div className='flex flex-col items-center shadow-lg rounded-xl p-4 dark:bg-slate-700 dark:shadow-black'>
-              <Image src={web5} className='rounded-lg mb-4' width={'100%'} height={'100%'}/>
+              <Image src={web5}  alt="Imagen del proyecto" className='rounded-lg mb-4' width={'100%'} height={'100%'}/>
               <a className='text-base sm:text-lg cursor-pointer bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md' 
               href='https://bootstrap-fa53a.web.app/'>Ver más</a>
             </div>
