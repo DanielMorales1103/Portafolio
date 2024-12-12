@@ -1,16 +1,16 @@
 "use client";
 
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function LanguageSwitcher() {
   const router = useRouter();
-  const pathname = usePathname();
 
   const changeLocale = (locale) => {
-    const pathSegments = pathname.split("/");
-    pathSegments[1] = locale; // Cambia el segmento del idioma
-    const newPathname = pathSegments.join("/");
-    router.push(newPathname);
+    if (locale === 'en') {
+      router.push('/');
+    } else {
+      router.push('/es');
+    }
   };
 
   return (

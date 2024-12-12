@@ -8,9 +8,9 @@ import devdm from "../../public/dev-dm-wave.png";
 import web5 from "../../public/web5.png";
 import React, { useState } from 'react';
 import { useTranslations } from "next-intl";
-import LanguageSwitcher from './components/LanguageSwitcher';
+import LanguageSwitcher from './LanguageSwitcher';
 
-export default function Home() {
+export default function PageContent() {
   const [darkmode, setDarkmode] = useState(true)
   const t = useTranslations();
   return (

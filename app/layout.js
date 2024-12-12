@@ -1,26 +1,27 @@
-import '../globals.css'
+import './globals.css'
 import { Inter } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import IntlProviderWrapper from './components/IntlProviderWrapper'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'es' }]
-}
+export const metadata = {
+  title: 'Daniel Morales',
+  description: 'Portafolio Daniel Morales',
+};
 
-export default async function RootLayout({ children, params: { locale } }) {
+export default async function RootLayout({ children }) {
   let messages
   try {
-    messages = (await import(`../../locales/${locale}/common.json`)).default
+    messages = (await import(`../locales/en/common.json`)).default
   } catch (error) {
     notFound()
   }
 
   return (
-    <html lang={locale}>
+    <html lang="en">
       <body className={inter.className}>
-        <IntlProviderWrapper locale={locale} messages={messages}>
+        <IntlProviderWrapper locale="en" messages={messages}>
           {children}
         </IntlProviderWrapper>
       </body>
